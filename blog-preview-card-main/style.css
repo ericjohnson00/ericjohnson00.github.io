@@ -1,0 +1,100 @@
+/* Base Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables forthe given colors */
+/* color: var(--primary); */
+:root {
+  --primary: hsl(47, 88%, 63%);
+  --light: hsl(0, 0%, 100%);
+  --md-dark: hsl(0, 0%, 50%);
+  --dark: hsl(0, 0%, 7%);
+}
+
+body {
+  background: var(--primary);
+  font-family: "Figtree", sans-serif;
+}
+
+/* Card */
+
+.card {
+  display: grid;
+  width: 375px;
+  height: 500px;
+  background: var(--light);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--dark);
+  box-shadow: 8px 8px var(--dark);
+}
+
+.card .card-header-img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  background: var(--primary);
+  color: var(--dark);
+  padding: 4px;
+  border-radius: 5px;
+  width: 90px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card h1:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.card .date {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card .author {
+  display: flex;
+  align-items: center;
+}
+
+.card .avatar {
+  height: 32px;
+  padding-right: 10px;
+}
+
+.card .name {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+/* Utility */
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
