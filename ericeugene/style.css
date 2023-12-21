@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+}
+
+.brand {
+ font-size: 1.5rem; 
+ margin: .5rem;
+}
+
+.brand img {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  padding: .5rem;
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.nav-links li:hover {
+  background-color: #444;
+}
+
+.toggle {
+  position: absolute;
+  top: 1.55rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33px;
+  height: 22px;
+}
+
+.toggle .bar {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.hero {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+@media (max-width: 600px) {
+  .toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    position: relative;
+    animation: slideDown 0.2s ease-in-out forwards; 
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .container {
+    padding-top: 0;
+  }
+
+
+  /* Define the animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-container {
+  background: rgb(150, 112, 255);
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.form-container h1 {
+  color: white;
+}
+
+
+
+
+}
+
+
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+
+.container {
+  padding-top: 0px;
+}
+
+
+.hero {
+  /* display: grid; */
+  justify-content: center;
+  /* align-items: center; */
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  background-image: url('img/pexels-neo-2653362.jpg'); /* Specify the path to your image */
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center; /* Position the background image */
+  /* You can add more styles or properties as needed */
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+.title-msg {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(150, 112, 255);
+  font-size: 1.4rem;
+}
+
+.start-btn {
+  width: 140px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgb(150, 112, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.about img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.about {
+
+  text-align: center;
+  color: white;
+}
+
+.about-p {
+
+  text-align: center;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
